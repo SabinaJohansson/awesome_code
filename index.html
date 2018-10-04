@@ -13,8 +13,21 @@
         </div>
         <button class"addOption" style="background-color:pink">add</button>
       </div>
+      <div class="resultSection"></div>
   <button>go!</button>
   <a href="C:\Users\sabin\Desktop\Gaming_pic">
   <img src="C:\Users\sabin\Desktop\Gaming_pic" alt="Gaming_pic" height="42" width="42">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script>
+        $(function() {
+          $('.resultSection').hide()
+          var add_Option = function() {
+            $('.inputs').append('<input></input>')
+            }
+
+          $('.addOption').click(add_Option)
+        })
+</script>
 </body>
 </html>
