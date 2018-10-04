@@ -1,33 +1,43 @@
 <!doctype html>
 <html lang=en>
   <head>
-    <meta charset="utf-8"
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="main.css" media="screen" />
+    <meta charset=utf-8>
+    <title>Gaming SWTOR..</title>
+    <link href="./main.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <h1>Gaming SWTOR..</h1>
-    <div class="InputSection">
-      <div class input>
-        <input placeholder="SOMETHING"></input>
-        </div>
-        <button class"addOption" style="background-color:pink">add</button>
+    <div class="inputSection">
+      <div class="inputs">
+        <input placeholder="Something"></input>
       </div>
-      <div class="resultSection"></div>
-  <button>go!</button>
-  <a href="C:\Users\sabin\Desktop\Gaming_pic">
-  <img src="C:\Users\sabin\Desktop\Gaming_pic" alt="Gaming_pic" height="42" width="42">
+      <button class="addOption">Add</button>
+    </div>
+    <div class="resultSection"></div>
+    <button class="submit">Go!</button>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-      <script>
-        $(function() {
-          $('.resultSection').hide()
-          var add_Option = function() {
-            $('.inputs').append('<input></input>')
-            }
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+      $(function() {
+        $('.resultSection').hide()
+        var add_option = function() {
+          $('.inputs').append('<input></input>')
+        }
+        $('.addOption').click(add_option)
 
-          $('.addOption').click(add_Option)
-        })
-</script>
-</body>
+        var options = []
+        var submit = function() {
+          $('.inputSection').hide()
+          $('.resultSection').css('display', 'flex')
+          $('input').each(function() {
+            option.push($(this).val())
+          })
+          var winner = options [Math.floor(Math.random() * option.lenght)]
+          console.log(winner)
+          $('.resultSection').text(winner)
+        }
+          $('.submit').click(submit)
+      })
+    </script>
+  </body>
 </html>
