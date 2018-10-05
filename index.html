@@ -30,11 +30,12 @@
         var submit = function() {
           $('.inputSection').hide()
           $('.resultSection').css('display', 'flex')
+
+          var option = [];
           $('input').each(function() {
             option.push($(this).val())
           })
-          var winner = options [Math.floor(Math.random() * option.lenght)]
-          console.log(winner)
+          var winner = option[Math.floor(Math.random() * option.length)]
           $('.resultSection').text(winner)
         }
           $('.submit').click(submit)
