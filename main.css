@@ -31,3 +31,11 @@ margin-top 10px;
 .addOption {
 margin-right 10px;
 }
+
+.resultSection {
+  height: 300px
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+
+}
